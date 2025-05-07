@@ -7,7 +7,6 @@ import Carousel from './components/Carousel'
 export default function Home() {
   return (
     <main>
-      <NavBar/>
       <h1 className='font-bold'>Hello World!</h1>
       <Link href={"/users"} className='btn btn-ghost'> Users Page</Link>
       <ProductCard/>
