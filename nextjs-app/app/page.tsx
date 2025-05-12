@@ -4,6 +4,7 @@ import { Changa } from 'next/font/google'
 import ProductCard from './components/ProductCard'
 import NavBar from './components/NavBar'
 import Carousel from './components/Carousel'
+import StatsCard from './components/StatsCard'
 
 const changa = Changa({
    subsets: ['latin'],
@@ -14,10 +15,17 @@ const changa = Changa({
 export default function Home() {
   return (
     <main >
-      <h1 >Hello World!</h1>
-      <Link href={"/users"} className='btn btn-ghost'> Users Page</Link>
-      <ProductCard/>
-      <Carousel/>
+      <section>
+        <div className='w-auto h-screen grid grid-cols-2'>
+          <div className='w-full h-full bg-amber-950'>
+            <StatsCard/>
+          </div>
+          
+          <div className='w-full h-full bg-amber-200'>
+            <p>Sec2</p>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

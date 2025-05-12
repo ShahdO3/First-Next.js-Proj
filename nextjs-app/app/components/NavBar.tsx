@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar bg-base-300 shadow-md shadow-stone-900 rounded-4xl p-2 mb-10">
-    <div className="navbar-start">
+    <div className="navbar-start pl-3">
       <ul
         tabIndex={0}
         className="z-1">
@@ -44,8 +44,8 @@ const NavBar = () => {
         </button>
       </div>
       <div className="navbar-end">
-      <div className="avatar">
-        <div className="w-8 rounded-full">
+      <div className="avatar pr-2">
+        <div className="w-7 rounded-full ">
           <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
         </div>
       </div>
