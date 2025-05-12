@@ -7,49 +7,48 @@ import { IoIosBug } from "react-icons/io";
 import { link } from 'fs';
 import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 const NavBar = () => {
 
   const currentPathN = usePathname();
 
   const links = [
-    {label: 'Homepage', href: '/'},
+    {label: 'Dashboard', href: '/'},
     {label: 'Issues', href: '/issues'}
     
   ]
 
   return (
-    <div className="navbar bg-base-100 shadow-md shadow-accent-content rounded-xl p-2 mb-10">
-  <div className="navbar-start">
-    <Link href="/"><IoIosBug/></Link>
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-      </div>
+    <div className="navbar bg-base-300 shadow-md shadow-stone-900 rounded-4xl p-2 mb-10">
+    <div className="navbar-start">
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow-md border">
+        className="z-1">
 
           {links.map(link =>
             <Link 
             key={link.href}
             className={classNames({
-              'opacity-100': link.href == currentPathN,
-              'opacity-70': link.href != currentPathN,
-              'hover:opacity-100 transition-colors font-bold p-2': true,
+              'opacity-100 font-extrabold ': link.href == currentPathN,
+              'opacity-70 font-medium': link.href != currentPathN,
+              'hover:opacity-100 transition-colors p-2 text-base': true,
             })}
             href={link.href}>{link.label}</Link>
           )}
-      </ul>
-    </div>
-  </div>
-  <div className="navbar-center ">
-    <a className="btn btn-ghost text-xl">Issue Tracker</a>
-  </div>
-  <div className="navbar-end">
-    <button className="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /> </svg>
-    </button>
+        </ul>
+      </div>
+      <div className="navbar-center ">
+        <button className='btn btn-ghost'>
+            <Image src={'/bugged-out-high-resolution-logo-transparent.png'} alt='Bugged Out Logo' width={120} height={50} />
+        </button>
+      </div>
+      <div className="navbar-end">
+      <div className="avatar">
+        <div className="w-8 rounded-full">
+          <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+        </div>
+      </div>
     
     <ThemeSwitcher/>
   </div>

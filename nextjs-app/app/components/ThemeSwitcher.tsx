@@ -4,7 +4,7 @@ const ThemeSwitcher = () => {
   return (
     <label className="swap swap-rotate p-1.5">
     {/* this hidden checkbox controls the state */}
-    <input type="checkbox" className="theme-controller" value="forest" />
+    <input type="checkbox" className="theme-controller" value="BuggedOutDark" />
 
     {/* sun icon */}
     <svg

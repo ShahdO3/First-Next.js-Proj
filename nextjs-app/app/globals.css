@@ -2,6 +2,77 @@
 @plugin "daisyui" {
   themes: lemonade, forest;
 }
+
+@plugin "daisyui/theme" {
+  name: "BuggedOutLight";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: rgba(138, 117, 224, 1);
+  --color-base-200: rgba(192, 184, 255, 1);
+  --color-base-300: rgba(192, 184, 227, 1);
+  --color-base-content: rgba(50, 61, 54, 1);
+  --color-primary: rgba(162, 150, 192, 1);
+  --color-primary-content: rgba(108, 95, 189, 1);
+  --color-secondary: rgba(192, 170, 150, 1);
+  --color-secondary-content: rgba(189, 95, 95, 1);
+  --color-accent: rgba(212, 227, 192, 1);
+  --color-accent-content: rgba(95, 189, 112, 1);
+  --color-neutral: oklch(98% 0 0);
+  --color-neutral-content: oklch(21% 0.006 285.885);
+  --color-info: rgba(233, 199, 237, 1);
+  --color-info-content: rgba(138, 117, 224, 1);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "BuggedOutDark";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: rgba(64, 60, 80, 1);
+  --color-base-200: rgba(64, 60, 100, 1);
+  --color-base-300: rgba(40, 38, 49, 1);
+  --color-base-content: rgba(230, 240, 233, 1);
+  --color-primary: rgba(74, 68, 92, 1);
+  --color-primary-content: rgba(200, 194, 237, 1);
+  --color-secondary: rgba(83, 44, 23, 1);
+  --color-secondary-content: rgba(231, 206, 206, 1);
+  --color-accent: rgba(72, 78, 64, 1);
+  --color-accent-content: rgba(214, 231, 217, 1);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: rgba(172, 149, 181, 1);
+  --color-info-content: rgba(111, 97, 172, 1);
+  --color-success: oklch(37% 0.077 168.94);
+  --color-success-content: oklch(90% 0.093 164.15);
+  --color-warning: oklch(27% 0.077 45.635);
+  --color-warning-content: oklch(92% 0.12 95.746);
+  --color-error: oklch(27% 0.105 12.094);
+  --color-error-content: oklch(89% 0.058 10.001);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgd: 255, 255, 255;

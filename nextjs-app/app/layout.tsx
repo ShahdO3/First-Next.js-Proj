@@ -24,12 +24,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="lemonade" className={changa.className}>
-      <body >
+    <html lang="en" data-theme="BuggedOut" className={changa.className}>
+      <body className='bg-accent'>
           <NavBar/>
-          <Theme accentColor="purple" grayColor="slate" radius="large" scaling="110%">
-            <main className='p-5 '>{children}</main>
-          </Theme>
+          <main className='p-5 bg-accent'>{children}</main>
         </body>
     </html>
   )
