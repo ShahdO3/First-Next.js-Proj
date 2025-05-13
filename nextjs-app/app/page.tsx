@@ -8,6 +8,9 @@ import StatsCard from './components/StatsCard'
 import LatestIssuesTable from './components/LatestIssuesTable'
 import { Inter } from 'next/font/google'
 import DashboardBarChart from './components/DashboardBarChart'
+import prisma from '@/lib/prisma'
+
+
 
 
 const inter = Inter({
@@ -16,7 +19,7 @@ const inter = Inter({
    variable: '--font-inter' 
   })
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className={inter.className}>
       <section>

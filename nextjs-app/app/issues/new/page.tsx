@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, Callout, Text, TextField } from '@radix-ui/themes'
+import { Box, Button, Callout, Text, TextField } from '@radix-ui/themes'
 import SimpleMDE from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
 import {useForm, Controller} from 'react-hook-form'
@@ -52,8 +52,7 @@ const NewIssuePage = () => {
             setError('An unexpected error occured')
           }
       })}>
-          <TextField.Root placeholder='Title' {...register('title')}>
-          </TextField.Root>
+          <input type="text" placeholder='Title' {...register('title')} className='input input-info bg-neutral shadow-md w-full'/>
 
           <ErrorMessage> {errors.title?.message}</ErrorMessage>
 
@@ -64,7 +63,7 @@ const NewIssuePage = () => {
           />
           <ErrorMessage> {errors.description?.message}</ErrorMessage>
 
-          <Button disabled = {isSubmitting}>
+          <Button disabled = {isSubmitting} >
             Submit New Issue { isSubmitting && <Spinner/>}
           </Button>
       </form>
